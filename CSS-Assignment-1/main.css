@@ -88,6 +88,11 @@ label[for="city"] {
     border-radius: 20px;
 }
 
+.btn:hover {
+    cursor: pointer;
+  }
+
+
 #btn1 {
     float: right;
     margin-right: 12%;
