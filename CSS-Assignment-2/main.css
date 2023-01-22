@@ -1,0 +1,65 @@
+html {
+    font-size: 20px;
+}
+
+h1>p {
+    font-size: 3rem;
+}
+
+
+.em {
+    border: 10px solid black;
+}
+
+.em p {
+    font-size: 2em;
+}
+
+
+.vw {
+    height: 50vh;
+    width: 30vw;
+    border: 20px solid black;
+}
+
+div>.child2 {
+    color: red;
+    background-color: yellow;
+}
+
+h2+.Child1 {
+    color: red;
+    background-color: yellow;
+}
+
+div~.Sibling_Selector {
+    color: red;
+    background-color: yellow;
+}
+.container{
+    height: 400px;
+}
+
+.transform1 {
+    position: relative;
+    top: 50px;
+    left: 45%;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    width: 100px;
+    height: 100px;
+    background-color: #0000ff;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
+
+}
+
+.transform1:hover {
+    background-color: #ffcccc;
+    transform: rotate(360deg) scale(2, 2);
+
+}
+
+.transform1>p {
+    margin-top: 40%;
+}
