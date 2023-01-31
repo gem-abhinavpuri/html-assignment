@@ -1,4 +1,4 @@
-data = [
+const data = [
     ["Name", "Age", "DOB", "Email", "Company"],
     ["Abhinav", "21", "16-07-2001", "abhinav@gamil.com", "Gemini Solutions"],
     ["Arshit", "22", "12-02-2000", "arshit@gamil.com", "Gemini Solutions"],
