@@ -1,0 +1,94 @@
+.video-container {
+    position: relative;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    color: white;
+}
+
+.video-overlay-1 {
+    position: absolute;
+    top: 60%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    color: black;
+}
+
+.control {
+    margin: auto;
+}
+
+.play_btn {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: 4px solid white;
+    background: none;
+
+}
+
+.triangle_button {
+    width: 0;
+    height: 0;
+    margin: auto;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 30px solid white;
+}
+
+.button-position-1 {
+    width: 100%;
+}
+
+.button-style-1 {
+    width: 160px;
+}
+
+.button-style-2 {
+    width: 120px;
+}
+
+
+.form-1 {
+    width: 80%;
+}
+
+.bi-x-circle {
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 767px) {
+    #second-overlay {
+        display: none;
+    }
+
+    .button-style-1 {
+        width: 80px;
+        height: auto;
+    }
+
+    .button-style-1>span {
+        font-size: smaller;
+    }
+}
+
+@media screen and (max-width: 1049px) {
+    .button-style-1 {
+        width: 100px;
+        height: auto;
+    }
+}
