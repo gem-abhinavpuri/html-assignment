@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Assignment 1</title>
+
+    <link href="main.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+    <!-- Navbar and header-->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg  rounded" aria-label="Eleventh navbar example">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="data:image/png;base64,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"
+                        height="50" class="d-inline-block align-top" alt="">
+                    <h4 class="d-inline-block pt-2">Gemini Solitions</h4>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse ms-5" id="navbarsExample09">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item me-2">
+                            <a class="nav-link text-primary fs-5" aria-current="page" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item me-2">
+                            <a class="nav-link text-primary fs-5" href="#">Community</a>
+                        </li>
+                        <li class="nav-item me-2">
+                            <a class="nav-link text-primary fs-5">Support</a>
+                        </li>
+                    </ul>
+                    <div class=" me-5 container button-position-1">
+                        <a class="btn btn-primary float-end button-style-1" href="#">Sign Up</a>
+                        <a class="btn btn-outline-primary float-end button-style-1 me-3" href="#">Login</a>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <!-- Video -->
+    <div class="video-container mb-5">
+        <video id="videoPlayer" width="100%" height="100%" poster="thumbnail.png">
+            <source src="video.mp4" type="video/mp4">
+        </video>
+        <div id="video-overlay" class="video-overlay container-fluid">
+            <div id="videoControls col" class="control clearfix">
+                <button id="playPauseButton" class="play_btn">
+                    <div id="triangle_button" class="triangle_button"></div>
+                </button>
+            </div>
+        </div>
+
+        <div id=" container-fluid video-overlay-1" class="video-overlay-1 container-fluid">
+            <div id="second-overlay" class="clearfix text-center">
+                <p class="fs-1">The largest community of photo enthusiasts</p>
+
+                <a href="#form-details"><button class="btn btn-primary">Join Today</button></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Grid -->
+    <section class="mt-5 mb-5">
+        <div class="container overflow-hidden">
+            <div class="row gy-5">
+                <div class="col-6">
+                    <div class="p-3">
+                        <h1>
+                            Snap photos and share like never before
+                        </h1>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="p-3"></div>
+                </div>
+                <div class="col-6">
+                    <div class="p-3">
+                        <h3>
+                            Sed ut
+                        </h3>
+                        <p class="mt-4 text-justify ">
+                            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                            consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+                            est.
+                        </p>
+                        <button type="button" class="btn btn-outline-primary">Learn more</button>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="p-3">
+                        <h3>Nemo enim ipsam</h3>
+                        <p class="mt-4 text-justify ">
+                            Consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+                            est, qui dolorem ipsum quia dolor sit amet. consectetur adipisci velit, sed quia non numquam
+
+                        </p>
+                        <button type="button" class="btn btn-outline-primary">Learn more</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row gy-5">
+                <div class="col-6">
+                    <div class="p-3">
+                        <h3>Lorem ipsum dolor</h3>
+                        <p class="mt-4 text-justify ">
+                            Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+                        </p>
+                        <button type="button" class="btn btn-outline-primary">Learn more</button>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="p-3">
+                        <h3>Tempor incididunt</h3>
+                        <p class="mt-4 text-justify ">
+                            Eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia
+                            dolor sit amet, consectetur adipisci velit, sed quia non numquam eius modi tempora
+                        </p>
+                        <button type="button" class="btn btn-outline-primary">Learn more</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <br>
+    <br>
+    <br>
+
+    <!-- Form -->
+    <section class="mt-5 container">
+        <h1 class="text-center">
+            Ready to take free Trail?
+        </h1>
+
+        <p class="fs-1 text-center mb-5 mt-5">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+        </p>
+
+        <h1 class="text-center">
+            Subscribe for free
+        </h1>
+
+        <div class="container border border-2 mt-5 form-1" id="form-details">
+
+            <form>
+                <div class="row mt-5">
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label class="mb-3" for="firstName">First Name</label>
+                            <input type="text" name="firstName" class="form-control" id="firstName"
+                                placeholder="placeholder">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label class="mb-3" for="middleName">Middle Name</label>
+                            <input type="text" name="middleName" class="form-control" id="middleName"
+                                placeholder="placeholder">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label class="mb-3" for="lastName">Last Name</label>
+                            <input type="text" name="lastName" class="form-control" id="lastName"
+                                placeholder="placeholder">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label class="mb-3" for="gender">Gender</label>
+                            <select class="form-select" name="gender" id="gender" aria-label="Default select example">
+                                <option selected>Select</option>
+                                <option value="1">Male</option>
+                                <option value="2">Female</option>
+                                <option value="3">Others</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label class="mb-3" for="age">Age</label>
+                            <input type="text" name="age" class="form-control" id="age" placeholder="placeholder">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label class="mb-3" for="contactNumber">Contact Number</label>
+                            <input type="text" name="contactNumber" class="form-control" id="contactNumber"
+                                placeholder="placeholder">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-5">
+                    <div class=" col-sm-12">
+                        <label class="mb-3" for="address">Address</label>
+                        <textarea class="form-control" placeholder="Write your own message here" id="floatingTextarea"
+                            name="address" rows="5"></textarea>
+
+                    </div>
+                </div>
+
+                <div class="container text-center mt-5 mb-5"><button type="submit"
+                        class="btn btn-outline-primary button-style-2  "> Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <br>
+    
+    <!-- Tabs -->
+    <section class=" mt-5 mb-5">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6">
+                    <img src="pic-1.png" class="img-fluid" alt="tree">
+                </div>
+
+                <div class="col-md-6">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item ">
+                            <a class="nav-link active cursor" id="tab1" aria-current="page" onclick="tab1();">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link cursor  border-top border-end" id="tab2" onclick="tab2();">Profile</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link cursor border-top border-end" id="tab3" onclick="tab3();">Contact</a>
+                        </li>
+                    </ul>
+                    <p class="text-wrap mt-3" id="text-area">
+                        Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua,
+                        retro synth master cleanse. Mustache cliche tempor, williams burg carles vegan helvetica.
+                        Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui inure
+                        terry
+                        richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american
+                        apparel, butcher voluptate nisi qui.
+                    </p>
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <br>
+
+    <!-- accordion -->
+    <section>
+        <div class="container text-center mb-5">
+            <div class="row">
+                <div class="col-md-6">
+
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Accordion Item #1
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>This is the first item's accordion body.</strong> It is shown by default,
+                                    until the collapse plugin adds the appropriate classes that we use to style each
+                                    element. These classes control the overall appearance, as well as the showing and
+                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                                    our default variables. It's also worth noting that just about any HTML can go within
+                                    the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button fw-bold collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                                    aria-controls="collapseTwo">
+                                    Accordion Item #2
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>This is the second item's accordion body.</strong> It is hidden by default,
+                                    until the collapse plugin adds the appropriate classes that we use to style each
+                                    element. These classes control the overall appearance, as well as the showing and
+                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                                    our default variables. It's also worth noting that just about any HTML can go within
+                                    the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button fw-bold collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                                    aria-controls="collapseThree">
+                                    Accordion Item #3
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>This is the third item's accordion body.</strong> It is hidden by default,
+                                    until the collapse plugin adds the appropriate classes that we use to style each
+                                    element. These classes control the overall appearance, as well as the showing and
+                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                                    our default variables. It's also worth noting that just about any HTML can go within
+                                    the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+
+                    <img src="pic-2.png" class="img-fluid" alt="tree">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <br>
+    <br>
+
+    <!-- Icon -->
+    <section class="mt-5 mb-5">
+        <div class="container">
+            <p class="fs-1">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+            </p>
+            <div class="text-center mt-5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                    class="bi bi-x-circle text-secondary bg-body-secondary" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                    <path
+                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                </svg>
+                <p class="mt-2">nemo enim ipsam </p>
+            </div>
+
+        </div>
+    </section>
+    <br>
+
+    <section class="mt-5 mb-5">
+        <div class="container text-center">
+
+            <h1 class="fs-1 mb-5"> You're in good company</h1>
+            <p class="fs-1">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+            </p>
+        </div>
+
+        <br>
+        <br>
+
+<!-- List-group and badges -->
+        <div class="container-fluid mt-5 px-4">
+            <div class="row gx-2">
+                <div class="col">
+                    <div class="p-3">
+
+                        <ol class="list-group ">
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <div class="ms-2 me-auto">
+
+                                    Cras justo odio
+                                </div>
+                                <span class="badge bg-primary rounded-pill">12</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <div class="ms-2 me-auto">
+
+                                    Dapibus ac facilisis in
+
+                                </div>
+                                <span class="badge bg-primary rounded-pill">54</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <div class="ms-2 me-auto">
+                                    Morbi leo risus
+                                </div>
+                                <span class="badge bg-primary rounded-pill">5</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <div class="ms-2 me-auto">
+                                    Porta ac consectetur ac
+
+                                </div>
+                                <span class="badge bg-primary rounded-pill">123</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <div class="ms-2 me-auto">
+                                    Vestibulum at eros
+                                </div>
+                                <span class="badge bg-primary rounded-pill">65</span>
+                            </li>
+                        </ol>
+
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="p-3">
+
+                        <ol class="list-group ">
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <div class="ms-2 me-auto">
+
+                                    Cras justo odio
+                                </div>
+                                <span class="badge bg-primary rounded-pill">12</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <div class="ms-2 me-auto">
+
+                                    Dapibus ac facilisis in
+
+                                </div>
+                                <span class="badge bg-primary rounded-pill">54</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <div class="ms-2 me-auto">
+                                    Morbi leo risus
+                                </div>
+                                <span class="badge bg-primary rounded-pill">5</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <div class="ms-2 me-auto">
+                                    Porta ac consectetur ac
+
+                                </div>
+                                <span class="badge bg-primary rounded-pill">123</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <div class="ms-2 me-auto">
+                                    Vestibulum at eros
+                                </div>
+                                <span class="badge bg-primary rounded-pill">65</span>
+                            </li>
+                        </ol>
+
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="p-3">
+
+                        <ol class="list-group ">
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <div class="ms-2 me-auto">
+
+                                    Cras justo odio
+                                </div>
+                                <span class="badge bg-primary rounded-pill">12</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <div class="ms-2 me-auto">
+
+                                    Dapibus ac facilisis in
+
+                                </div>
+                                <span class="badge bg-primary rounded-pill">54</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <div class="ms-2 me-auto">
+                                    Morbi leo risus
+                                </div>
+                                <span class="badge bg-primary rounded-pill">5</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <div class="ms-2 me-auto">
+                                    Porta ac consectetur ac
+
+                                </div>
+                                <span class="badge bg-primary rounded-pill">123</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <div class="ms-2 me-auto">
+                                    Vestibulum at eros
+                                </div>
+                                <span class="badge bg-primary rounded-pill">65</span>
+                            </li>
+                        </ol>
+
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="p-3">
+
+                        <ol class="list-group ">
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <div class="ms-2 me-auto">
+
+                                    Cras justo odio
+                                </div>
+                                <span class="badge bg-primary rounded-pill">12</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <div class="ms-2 me-auto">
+
+                                    Dapibus ac facilisis in
+
+                                </div>
+                                <span class="badge bg-primary rounded-pill">54</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <div class="ms-2 me-auto">
+                                    Morbi leo risus
+                                </div>
+                                <span class="badge bg-primary rounded-pill">5</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <div class="ms-2 me-auto">
+                                    Porta ac consectetur ac
+
+                                </div>
+                                <span class="badge bg-primary rounded-pill">123</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <div class="ms-2 me-auto">
+                                    Vestibulum at eros
+                                </div>
+                                <span class="badge bg-primary rounded-pill">65</span>
+                            </li>
+                        </ol>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
